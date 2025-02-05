@@ -3341,6 +3341,10 @@ body {
     height: 32px;
   }
 
+  .navbar-brand.w--current {
+    height: 40px;
+  }
+
   .nav-menu-wrapper {
     margin-right: 0;
     padding: 40px 20px;
