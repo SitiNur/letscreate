@@ -2335,7 +2335,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   padding-top: 25vh;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   display: flex;
 }
 
@@ -2402,13 +2402,15 @@ body {
 }
 
 .footer-text {
+  background-color: var(--black);
   color: #b9b9b9;
   letter-spacing: -.02em;
   align-self: center;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 10px 20px;
   font-family: Gloria Hallelujah, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 150%;
   text-decoration: none;
@@ -2682,7 +2684,7 @@ body {
   .nav-menu-wrapper {
     grid-column-gap: 60px;
     grid-row-gap: 60px;
-    background-color: var(--black);
+    background-color: #000;
     border: 1px solid #ffffff26;
     border-radius: 8px;
     flex-flow: column;
