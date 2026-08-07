@@ -17,8 +17,24 @@ menuButton.addEventListener('click', () => {
 
 navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 
+let previousScrollY = window.scrollY;
+
 window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 12);
+  const currentScrollY = window.scrollY;
+  const isMobile = window.matchMedia('(max-width: 599px)').matches;
+  const menuIsOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+  header.classList.toggle('scrolled', currentScrollY > 12);
+
+  if (!isMobile || menuIsOpen || currentScrollY < 70) {
+    header.classList.remove('mobile-hidden');
+  } else if (currentScrollY > previousScrollY + 5) {
+    header.classList.add('mobile-hidden');
+  } else if (currentScrollY < previousScrollY - 5) {
+    header.classList.remove('mobile-hidden');
+  }
+
+  previousScrollY = currentScrollY;
 }, { passive: true });
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
