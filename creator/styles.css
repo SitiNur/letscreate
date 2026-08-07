@@ -25,15 +25,21 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   background: var(--cloud);
   color: var(--ink);
   font-family: var(--body);
   font-size: 16px;
   line-height: 1.55;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 body.menu-open { overflow: hidden; }
 a { color: inherit; }
@@ -355,6 +361,7 @@ h1 span, .section-heading h2 span, .skills__headline h2 span { color: var(--viol
   .menu-button { width: 36px; height: 36px; gap: 6px; }
   .menu-button span:not(.sr-only) { width: 16px; }
   .site-nav { inset-block-start: 62px; min-height: calc(100vh - 62px); padding-inline: 14px; }
+  .hero-video__spark { right: -8px; }
 }
 
 @media (min-width: 700px) {
