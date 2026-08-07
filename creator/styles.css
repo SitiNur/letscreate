@@ -332,8 +332,10 @@ h1 span, .section-heading h2 span, .skills__headline h2 span { color: var(--viol
 
 .footer { padding: 35px 18px; background: var(--ink); color: white; }
 .footer__inner { display: grid; justify-items: center; gap: 18px; text-align: center; }
-.brand--footer { width: min(100%, 360px); padding: 10px 12px; background: white; border-radius: 14px; }
-.brand--footer img { width: 336px; max-width: 100%; }
+.footer__logos { width: 100%; display: flex; align-items: center; justify-content: center; gap: clamp(18px, 5vw, 56px); }
+.brand--footer { width: auto; padding: 0; background: transparent; border-radius: 0; }
+.brand--footer img,
+.footer__partner-logo { width: clamp(135px, 28vw, 240px); height: auto; display: block; }
 .footer p { margin: 0; color: #aaa9bc; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
 .footer a { text-underline-offset: 4px; }
 
@@ -437,6 +439,14 @@ h1 span, .section-heading h2 span, .skills__headline h2 span { color: var(--viol
   .step__graphic { position: relative; inset: auto; width: 100%; height: 210px; margin: 4px 0 24px; }
   .step h3 { margin: 0 0 10px; }
   .step p { margin: 0; }
+  .about__media { width: calc(100% - 40px); }
+  .about__arrow { width: 42px; height: 42px; }
+  .about__arrow--prev { left: -18px; }
+  .about__arrow--next { right: -18px; }
+  .screen-time__gallery figure {
+    animation: none !important;
+    transform: translate3d(0, var(--offset-y), 0) rotate(var(--rotate));
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
