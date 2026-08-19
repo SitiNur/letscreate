@@ -61,6 +61,24 @@ if (aboutSlider) {
   const counter = aboutSlider.querySelector('[data-about-counter]');
   let activeSlide = 0;
 
+  const showFirstFrame = (video) => {
+    video.preload = 'metadata';
+
+    const reveal = () => {
+      try {
+        if (video.currentTime < 0.05) video.currentTime = 0.1;
+      } catch (_) { /* ignore unloaded seek */ }
+    };
+
+    if (video.readyState >= 2) {
+      reveal();
+      return;
+    }
+
+    video.addEventListener('loadeddata', reveal, { once: true });
+    video.load();
+  };
+
   const showSlide = (nextIndex) => {
     activeSlide = (nextIndex + slides.length) % slides.length;
 
@@ -70,7 +88,7 @@ if (aboutSlider) {
       video.setAttribute('aria-hidden', String(!isActive));
 
       if (isActive) {
-        video.play().catch(() => {});
+        showFirstFrame(video);
       } else {
         video.pause();
       }
