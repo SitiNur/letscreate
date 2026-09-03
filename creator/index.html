@@ -26,6 +26,14 @@
   <link rel="icon" type="image/png" sizes="200x200" href="../let-us-create/assets/Icon%20Let%20Us%20Create.png">
   <link rel="apple-touch-icon" href="../let-us-create/assets/Icon%20Let%20Us%20Create.png">
   <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9P7YBRSBWV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9P7YBRSBWV');
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -154,7 +162,7 @@
     </a>
 
     <div class="mobile-header-actions">
-      <a class="button button--small mobile-register" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar</a>
+      <a class="button button--small mobile-register" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="header-mobile">Daftar</a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
         <span></span><span></span>
         <span class="sr-only">Buka menu</span>
@@ -169,8 +177,8 @@
       <a href="#program">Programs</a>
       <a href="#partner">Partnership</a>
       <div class="site-nav__actions">
-        <a class="button button--small button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener">WhatsApp</a>
-        <a class="button button--small" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar Sekarang</a>
+        <a class="button button--small button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener" data-track="whatsapp" data-track-location="nav">WhatsApp</a>
+        <a class="button button--small" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="nav">Daftar Sekarang</a>
       </div>
     </nav>
     </div>
@@ -184,8 +192,8 @@
         <h1>Where Young<br><span>Creators Begin.</span></h1>
         <p class="hero__lead">Setiap anak memiliki imajinasi tidak terbatas. Di Let Us Create, kami memberi bekal, ruang, dan keberanian. Belajar coding bukan tujuan, melainkan alat untuk mereka mewujudkan imajinasinya.</p>
         <div class="hero__actions">
-          <a class="button" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
-          <a class="button button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener">Tanya via WhatsApp</a>
+          <a class="button" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="hero">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
+          <a class="button button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener" data-track="whatsapp" data-track-location="hero">Tanya via WhatsApp</a>
         </div>
       </div>
 
@@ -379,7 +387,7 @@
             <div><dt>FOKUS</dt><dd>Rasa ingin tahu, logika, dan ekspresi</dd></div>
             <div><dt>HASIL</dt><dd>Karya personal</dd></div>
           </dl>
-          <a class="program-card__action" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
+          <a class="program-card__action" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="program-level-1">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
         </article>
 
         <article class="program-card program-card--makers reveal">
@@ -398,7 +406,7 @@
             <div><dt>FOKUS</dt><dd>Sistem, iterasi, dan problem-solving</dd></div>
             <div><dt>HASIL</dt><dd>Proyek yang lebih kompleks</dd></div>
           </dl>
-          <a class="program-card__action" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
+          <a class="program-card__action" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="program-level-2">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
         </article>
       </div>
 
@@ -407,7 +415,7 @@
         <div class="program__map-frame">
           <iframe title="Peta lokasi Master-HTC Salatiga" src="https://www.google.com/maps?q=-7.3297363,110.4978058&amp;hl=id&amp;z=17&amp;output=embed" width="360" height="180" allowfullscreen></iframe>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=Master+HTC+Salatiga+Jl.+Tentara+Pelajar+No.+25" target="_blank" rel="noopener">Buka di Google Maps</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Master+HTC+Salatiga+Jl.+Tentara+Pelajar+No.+25" target="_blank" rel="noopener" data-track="maps" data-track-location="program">Buka di Google Maps</a>
       </figure>
       </div>
     </section>
@@ -432,7 +440,7 @@
         <details class="reveal">
           <summary>Di mana lokasi kelasnya?<span>+</span></summary>
           <p>Saat ini kelas berlangsung di Master HTC Salatiga.</p>
-          <p><a href="https://www.google.com/maps/search/?api=1&query=Master+HTC+Salatiga+Jl.+Tentara+Pelajar+No.+25" target="_blank" rel="noopener">Lihat di Google Maps</a></p>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=Master+HTC+Salatiga+Jl.+Tentara+Pelajar+No.+25" target="_blank" rel="noopener" data-track="maps" data-track-location="faq">Lihat di Google Maps</a></p>
         </details>
         <details class="reveal">
           <summary>Apakah anak perlu membawa perangkat sendiri?<span>+</span></summary>
@@ -460,8 +468,8 @@
       <blockquote class="final-cta__parent-note"><span>“We’re parents too.</span><span>We carry the same big hopes for their future.”</span></blockquote>
       <h2>What will our child<br><em>create first?</em></h2>
       <div class="final-cta__actions">
-        <a class="button button--lime" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
-        <a class="button button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener">Tanya via WhatsApp</a>
+        <a class="button button--lime" href="https://forms.gle/ZhxVCD3VEMYuU9sq8" target="_blank" rel="noopener" data-track="register" data-track-location="final-cta">Daftar Sekarang <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
+        <a class="button button--secondary" href="https://wa.me/6285780709442?text=Halo%20Let%20Us%20Create%2C%20saya%20ingin%20bertanya%20tentang%20kelas%20Creative%20Coding." target="_blank" rel="noopener" data-track="whatsapp" data-track-location="final-cta">Tanya via WhatsApp</a>
       </div>
       </div>
     </section>
@@ -482,7 +490,7 @@
           <li>Format kelompok kecil maupun institusi</li>
           <li>Hasil belajar yang terlihat melalui karya</li>
         </ul>
-        <a class="button button--orange" href="mailto:siti.nurhasanah9292@gmail.com">Diskusikan Kemitraan <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
+        <a class="button button--orange" href="mailto:siti.nurhasanah9292@gmail.com" data-track="partnership" data-track-location="partner">Diskusikan Kemitraan <img class="arrow-icon" src="../let-us-create/assets/Arrow.svg" alt=""></a>
       </div>
       </div>
     </section>

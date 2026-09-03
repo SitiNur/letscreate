@@ -101,3 +101,64 @@ if (aboutSlider) {
   aboutSlider.querySelector('[data-about-next]').addEventListener('click', () => showSlide(activeSlide + 1));
   showSlide(0);
 }
+
+const trackEvent = (eventName, params = {}) => {
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', eventName, params);
+};
+
+document.querySelectorAll('[data-track]').forEach((element) => {
+  element.addEventListener('click', () => {
+    const action = element.getAttribute('data-track');
+    const location = element.getAttribute('data-track-location') || 'unknown';
+
+    if (action === 'register') {
+      trackEvent('generate_lead', {
+        event_category: 'conversion',
+        event_label: location,
+        link_url: element.href,
+        page: 'creator',
+      });
+      return;
+    }
+
+    if (action === 'whatsapp') {
+      trackEvent('contact', {
+        event_category: 'conversion',
+        event_label: location,
+        method: 'whatsapp',
+        page: 'creator',
+      });
+      return;
+    }
+
+    if (action === 'partnership') {
+      trackEvent('contact', {
+        event_category: 'conversion',
+        event_label: location,
+        method: 'email',
+        page: 'creator',
+      });
+      return;
+    }
+
+    trackEvent(action, {
+      event_category: 'engagement',
+      event_label: location,
+      page: 'creator',
+    });
+  });
+});
+
+document.querySelectorAll('.faq details').forEach((item) => {
+  item.addEventListener('toggle', () => {
+    if (!item.open) return;
+
+    const question = item.querySelector('summary')?.textContent?.replace(/\+$/, '').trim() || 'unknown';
+    trackEvent('faq_open', {
+      event_category: 'engagement',
+      event_label: question,
+      page: 'creator',
+    });
+  });
+});
