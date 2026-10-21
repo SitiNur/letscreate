@@ -1,8 +1,13 @@
 [build]
-  publish = "dist"
-  command = "rm -rf dist && mkdir -p dist/let-us-create && cp -r creator fonts dist/ && cp -r let-us-create/assets dist/let-us-create/ && find dist -name .DS_Store -delete"
+  publish = "."
+  command = ""
 
 [[redirects]]
-  from = "/"
-  to = "/creator/"
+  from = "/creator"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/creator/*"
+  to = "/:splat"
   status = 301
